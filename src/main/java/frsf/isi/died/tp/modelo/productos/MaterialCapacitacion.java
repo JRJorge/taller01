@@ -57,12 +57,42 @@ public abstract class MaterialCapacitacion {
 		this.costo = costo;
 	}
 
-
 	//TODO 01 implementar los metodos getters y setters y escribir el javadoc
 	// AYUDA: para implementar estos metodos usar un atajo del IDE 
 	// elegir el menu "Source" --> "Generate getters y setters" y elegir alli que metodos generar.
+		
+	/**
+	 * 
+	 * Ramirez Jorge
+	 * https://github.com/JRJorge/taller01.git	
+	 * metodo getters y setters
+	 * 
+	 */	
 	
+	public Integer getId() {
+		return id;
+	}
 
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public Double getCosto() {
+		return costo;
+	}
+
+	public void setCosto(Double costo) {
+		this.costo = costo;
+	}
+		
 	/**
 	 * El precio de un material se define según el tipo del material y toma como
 	 * base el costo del mismo
@@ -71,6 +101,7 @@ public abstract class MaterialCapacitacion {
 	 */
 	public abstract Double precio();
 	
+
 	/**
 	 * Retorna verdadero si es una instancia de libro, falso en caso contrario
 	 * @return
@@ -82,12 +113,18 @@ public abstract class MaterialCapacitacion {
 	 * @return
 	 */
 	public abstract Boolean esVideo();
+
+	
 	
 	//TODO 02: sobrescribir el metodo toString de la clase "Object"
 	//	el método toString retorna un string que representa el material actual
 	//  retornando el titulo, y el precio 	 * usando el formato : 
 	// [Titulo: <titulo> ; Precio: <precio> ]
 	
+	@Override
+	public String toString() {
+		return "MaterialCapacitacion [id=" + id + ", titulo=" + titulo + ", costo=" + costo + "]";
+	}
 	
 	// TODO 10: implementar Ordenable
 
